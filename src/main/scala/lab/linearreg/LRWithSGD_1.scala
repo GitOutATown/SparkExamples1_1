@@ -13,7 +13,7 @@ object LRWithSGD_1 extends App {
 	val sc = new SparkContext("local", "LRWithSGD_1", System.getenv("SPARK_HOME"))
 	
 	// Load and parse the data
-	val data = sc.textFile("test-data/ridge-data/lpsa.data")
+	val data = sc.textFile("test-data/mllib/ridge-data/lpsa.data")
 	
 	val parsedData = data.map { line =>
 		val parts = line.split(',')
